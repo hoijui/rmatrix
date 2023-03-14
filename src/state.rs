@@ -75,6 +75,7 @@ impl State {
                         KeyEvent {
                             code: KeyCode::Char('c'),
                             modifiers: m,
+                            ..
                         } if m.contains(KeyModifiers::CONTROL) => {
                             s.cleanup.cleanup();
                             return Ok(());
